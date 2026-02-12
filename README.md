@@ -32,7 +32,7 @@ The framework utilizes a three-stage deep learning pipeline:
 * A 4-layer fully connected (Dense) network using LeakyReLU activation and Batch Normalization.
 
 
-* 
+ 
 **Function**: Predicts and subtracts pilot noise to enhance the quality of received CSI.
 
 
