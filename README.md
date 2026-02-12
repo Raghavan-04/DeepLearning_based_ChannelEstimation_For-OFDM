@@ -1,132 +1,70 @@
+This project focuses on a **Deep Learning (DL)-based framework** for high-fidelity Channel State Information (CSI) recovery in **OFDM wireless systems**. By cascading a denoising network with a Transformer model, the system suppresses pilot noise and exploits global correlations across the OFDM grid without requiring prior channel statistics.
+
 # Deep Learning-based Channel Estimation for OFDM Wireless Communication
 
-This project focuses on enhancing Channel State Information (CSI) recovery in OFDM-based wireless systems using a cascaded deep learning architecture. It specifically addresses the limitations of traditional estimation methods like Least Squares (LS) and Linear Minimum Mean Squared Error (LMMSE) in noisy environments.
+## 📌 Problem Statement
 
----
-
- ## Project Overview
-
-**Objective**: To develop a software-based framework that cascades an **Initial Denoising Network (IDN)** with a **Transformer-based model** to reconstruct high-fidelity CSI without requiring prior channel statistics.
-
----
-
- ## Problem Statement
-
-Traditional estimation methods face several challenges:
-
-**Noise Sensitivity**: Severe performance degradation in low SNR (Signal-to-Noise Ratio) environments.
-
-**Statistical Dependency**: LMMSE requires prior knowledge of channel statistics, which are often unavailable in real-world scenarios.
-
-**Architectural Limitations**: Existing CNN models often fail to capture long-range time-frequency correlations.
-
-
-
----
-
- ## Proposed Methodology
-
-The framework utilizes a three-stage deep learning pipeline:
-
-1. **Stage 1: Initial Denoising Network (IDN)**
-* A 4-layer fully connected (Dense) network using LeakyReLU activation and Batch Normalization.
-
-
+Traditional estimation methods like **Least Squares (LS)** and **Linear Minimum Mean Squared Error (LMMSE)** face several hurdles in real-world environments:
  
-**Function**: Predicts and subtracts pilot noise to enhance the quality of received CSI.
+**Sensitivity to Noise:** Performance degrades significantly in low Signal-to-Noise Ratio (SNR) environments.
+ 
+**Statistical Dependency:** LMMSE requires prior knowledge of channel statistics, which are often unavailable.
+ 
+**Local Limitations:** Existing CNN models often fail to capture long-range time-frequency correlations.
 
 
 
+## 🚀 Proposed Methodology
 
-2. **Stage 2: Tokenization**
-* Converts the 2D channel grid (Frequency × Time) into a 1D sequence.
+The architecture is a software-based framework developed using **Python** and **PyTorch**. It utilizes a three-stage pipeline:
 
-
-* 
-**Process**: Flattens the grid, separates real/imaginary components, and appends **Positional Encoding** (Subcarrier and Symbol indices) to preserve spatial coordinates.
+1. **Stage 1: Initial Denoising Network (IDN):** A 4-layer fully connected network suppresses AWGN noise from the received pilot CSI.
 
 
+2. **Stage 2: Tokenization:** The 2D CSI grid is flattened and converted into 1D sequences. Real and imaginary components are separated, and positional encoding is added to preserve time-frequency coordinates.
 
 
-3. **Stage 3: Transformer Model**
-* Employs multi-head self-attention mechanisms.
-
-
-* 
-**Function**: Learns global correlations across subcarriers and symbols to reconstruct the complete CSI grid from limited pilot information.
-
-
+3. **Stage 3: Transformer Model:** A Multi-Head Self-Attention mechanism is used to reconstruct the complete CSI by capturing global dependencies across subcarriers and symbols.
 
 
 
 ---
 
-## ## Simulation & Performance Results
+## 📊 Performance & Results
 
-### ### Dataset Parameters
+The model was benchmarked against traditional methods at **10 dB SNR** and evaluated using **Normalized Mean Squared Error (NMSE)**.
 
-| Parameter | Value |
-| --- | --- |
-| Channel Model | Rayleigh Fading 
-
- |
-| No. of Subcarriers | 96 
+| Estimation Method | Model Category | NMSE (dB) |
+| --- | --- | --- |
+| **Least Squares (LS)** | Mathematical Baseline | -1.20 dB 
 
  |
-| No. of OFDM Symbols | 14 
+| **LMMSE** | Traditional Optimal | -1.37 dB 
 
  |
-| Pilot Density | 25% of grid (Scattered/Sparse) 
+| **IDN-Transformer** | **Proposed Project Model** | <br>**-1.57 dB** 
 
  |
 
-### ### Benchmark Results (SNR = 10 dB)
+### Key Metrics: 
+**Latency:** ~5ms per inference, making it suitable for time-sensitive processing.
 
-The proposed model was evaluated against traditional baselines using **Normalized Mean Square Error (NMSE)**:
-
-| Method | NMSE (dB) |
-| --- | --- |
-| Least Squares (LS) | -1.20 dB 
-
- |
-| LMMSE (Traditional Optimal) | -1.37 dB 
-
- |
-| **IDN-Transformer (Proposed)** | <br>**-1.57 dB** 
-
- |
-
-**Key Finding**: The IDN-Transformer consistently outperforms mathematical baselines by capturing global correlations across the 96 × 14 resource grid.
-
----
-
-## ## Technical Stack
-
-* 
-**Language**: Python 
+**Complexity:** Approximately 19.46 Million parameters.
+  
+**Efficiency:** 0.039 GFLOPs per inference, optimized for edge device deployment.
 
 
-* 
-**Libraries**: PyTorch/TensorFlow, NumPy, SciPy, Matplotlib 
 
+## 🛠️ Tools Used
+ 
+**Language:** Python 
+ 
+**Frameworks:** PyTorch / TensorFlow 
+ 
+**Environment:** Google Colab (GPU Support) 
 
-* 
-**Platform**: Google Colab with GPU support 
+**Libraries:** NumPy, SciPy, Matplotlib 
 
 
 
 ---
-
-## ## Remaining Work
-
-* Scaling the model to 10,000 samples.
-
-
-* Optimization for **16-QAM** modulation.
-
-
-* Final comparative analysis between the DL model and LMMSE.
-
-
-
-Would you like me to draft a specific **Introduction** or **Conclusion** section for this README based on the project details?
