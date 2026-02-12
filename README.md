@@ -34,17 +34,10 @@ The architecture is a software-based framework developed using **Python** and **
 
 The model was benchmarked against traditional methods at **10 dB SNR** and evaluated using **Normalized Mean Squared Error (NMSE)**.
 
-| Estimation Method | Model Category | NMSE (dB) |
-| --- | --- | --- |
-| **Least Squares (LS)** | Mathematical Baseline | -1.20 dB 
-
- |
-| **LMMSE** | Traditional Optimal | -1.37 dB 
-
- |
-| **IDN-Transformer** | **Proposed Project Model** | <br>**-1.57 dB** 
-
- |
+Estimation Method,Model Category,NMSE (dB)
+Least Squares (LS),Mathematical Baseline,-1.20 dB 
+LMMSE,Traditional Optimal,-1.37 dB 
+IDN-Transformer,Proposed Project Model,-1.57 dB +1
 
 ### Key Metrics: 
 **Latency:** ~5ms per inference, making it suitable for time-sensitive processing.
