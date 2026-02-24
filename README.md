@@ -66,6 +66,10 @@ The simulation environment is modeled after realistic 5G/LTE resource blocks.
 | **Modulation** | 4-QAM / 16-QAM | Standard modulation schemes. |
 
 ---
+## Current
+Testing with different parameters 
+**Problem**: Rayleigh fading creates "peaks" and "valleys" across time and frequency.
+Adjacent subcarriers and adjacent symbols are highly correlated. By flattening  96 x 14 grid into a single 1D vector and using nn.Linear are completely destroying that 2D geometric relationship. Furthermore, because your Transformer's sequence length is forced to 1, it cannot track how the channel changes over time.
 
 ## 🚀 Tech Stack
 * **Language:** Python 
