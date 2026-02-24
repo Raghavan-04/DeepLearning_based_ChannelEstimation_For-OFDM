@@ -1,6 +1,6 @@
 # Deep Learning-based Channel Estimation for OFDM Wireless Communication
 
-\This repository contains the implementation of a software-based OFDM channel estimation framework that leverages a cascaded **Initial Denoising Network (IDN)** and a **Transformer-based model** to reconstruct high-fidelity Channel State Information (CSI).
+This repository contains the implementation of a software-based OFDM channel estimation framework that leverages a cascaded **Initial Denoising Network (IDN)** and a **Transformer-based model** to reconstruct high-fidelity Channel State Information (CSI).
 
 
 
