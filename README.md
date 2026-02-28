@@ -30,7 +30,9 @@ Results obtained at **10 dB SNR** show the superiority of the proposed cascaded 
 | :--- | :--- | :--- | :--- |
 | **Least Squares (LS)** | Mathematical Baseline | -1.20 | Simple; highly sensitive to noise. |
 | **LMMSE** | Traditional Optimal | -1.37 | Traditional optimal but complex. |
-| **IDN-Transformer** | **Proposed Model** | **-1.57** | Superior noise suppression & global correlation. |
+| **IDN-Transformer** | **Phase_1** | **-0.70** | Superior noise suppression & global correlation. |
+| **IDN-Transformer** | **Phase_2** | **-1.57** | Optimised|
+| **IDN-Transformer** | **Phase_3** | **-4.5** | Optimised|
 
 ---
 
