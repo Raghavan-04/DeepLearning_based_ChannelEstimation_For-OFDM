@@ -32,7 +32,8 @@ Results obtained at **10 dB SNR** show the superiority of the proposed cascaded 
 | **LMMSE** | Traditional Optimal | -1.37 | Traditional optimal but complex. |
 | **IDN-Transformer** | **Phase_1** | **-0.70** | Superior noise suppression & global correlation. |
 | **IDN-Transformer** | **Phase_2** | **-1.57** | Optimised|
-| **IDN-Transformer** | **Phase_3** | **-4.5** | Optimised|
+| **IDN-Transformer** | **Phase_3** | **-4.56** | Optimised|
+| **IDN-Transformer** | **Phase_4** | **-6.70** | Optimising...|
 
 ---
 
