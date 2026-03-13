@@ -9,7 +9,7 @@ I have created a simple visualisation for Neural Network and OFDM signal and wha
 
 **OFDM:** https://ofdm-analysis.streamlit.app
 
-**Neural Network:** https://deeplearningbasedchannelestimationfor-ofdm-zecx7xgix7fdxcalt7d.streamlit.app
+**Neural Network:** https://neural-network-v1.streamlit.app
 
 --
 
