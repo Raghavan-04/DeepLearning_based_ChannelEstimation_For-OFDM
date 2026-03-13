@@ -318,3 +318,15 @@ else:
 
 # Add footer with explanation
 st.markdown("---")
+# Add footer with explanation
+
+st.markdown("""
+**How it works:**
+- **Input Layer (3 neurons)**: Takes X₁, X₂, X₃ values
+- **Hidden Layers**: Apply ReLU activation: a = max(0, W·x + b)
+- **Output Layer (1 neuron)**: Linear activation for regression
+- **Target Function**: y = x₁² + sin(x₂)·x₃ + 0.5·x₁·x₂
+
+The network learns to approximate this non-linear function through training!
+""")
+st.markdown("---")
