@@ -3,9 +3,12 @@
 This repository contains the implementation of a software-based OFDM channel estimation framework that leverages a cascaded **Initial Denoising Network (IDN)** and a **Transformer-based model** to reconstruct high-fidelity Channel State Information (CSI).
 
 --
+
 ## Visualisation
 I have created a simple visualisation for Neural Network and OFDM signal and what our project does 
+
 **OFDM:**
+
 **Neural Network:** https://deeplearningbasedchannelestimationfor-ofdm-zecx7xgix7fdxcalt7d.streamlit.app
 
 --
