@@ -8,6 +8,8 @@ I have created a simple visualisation for Neural Network and OFDM signal and wha
 **OFDM:**
 **Neural Network:** https://deeplearningbasedchannelestimationfor-ofdm-zecx7xgix7fdxcalt7d.streamlit.app
 
+--
+
 ## 📌 Project Overview
 Traditional estimation methods like Least Squares (LS) and LMMSE often struggle in low-SNR environments or require prior channel statistics that are unavailable in practice. Our approach utilizes self-attention mechanisms to capture global time-frequency correlations across the OFDM grid, significantly outperforming conventional baselines.
 
